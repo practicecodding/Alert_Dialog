@@ -13,12 +13,31 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button button,btnNo,btnYes;
+    Button button,btnNo,btnYes,enable,disable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        button = findViewById(R.id.button);
+        enable = findViewById(R.id.enable);
+        disable = findViewById(R.id.disable);
+
+        enable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button.setEnabled(true);
+            }
+        });
+
+        disable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button.setEnabled(false);
+            }
+        });
+
 
 
     }
