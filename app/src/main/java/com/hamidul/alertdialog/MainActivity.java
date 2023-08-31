@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setCancelable(false);
         dialog.show();
     }
 
